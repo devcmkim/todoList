@@ -65,7 +65,7 @@ class App extends Component {
                             <input
                                 type='text'
                                 className='form-control'
-                                placeholder='새로운 할 일을 입력해주세요.'
+                                placeholder='this is todolist.'
                                 value={this.state.todoInput}
                                 onChange={this._handleOnChangeTodoInput} //키보드 입력시에 otodoInput 의 state 가 변경됨
                                 onKeyDown={e => e.keyCode === 13 ? this._handleOnClickAddItem() : null}//키보드 입력이 에네터일 경우 같은 기능 수행
@@ -83,7 +83,7 @@ class App extends Component {
                 </div>
                 <div className='row' style={ { marginTop: 20 } }>
                     <div className='col-6'>
-                        <h3>해야할 일</h3>
+                        <h3>해야할 일(jenkins)</h3>
                         {
                             this.state.todoItems.filter(item => !item.isCompleted).map(item =>
                                 <div key={item.id} style={{ margin: 10 }}>
